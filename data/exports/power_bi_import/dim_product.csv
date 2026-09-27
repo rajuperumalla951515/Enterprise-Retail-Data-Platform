@@ -1,0 +1,145 @@
+product_sk,product_id,product_name,category,subcategory,brand,cost_price,selling_price,profit_margin,supplier_id,created_at
+1,PRD-IND-00001,Smartphones Model F985,Electronics & Gadgets,Smartphones,Mahindra Nexus,12649.25,24077.41,0.4746,SUP-IND-031,2020-01-29 15:40:10
+2,PRD-IND-00002,Smartphones Model A572,Electronics & Gadgets,Smartphones,Mahindra Nexus,35747.76,78405.86,0.5441,SUP-IND-034,2023-10-16 12:50:22
+3,PRD-IND-00003,Smartphones Model Z989,Electronics & Gadgets,Smartphones,Mahindra Nexus,32965.86,46315.37,0.2882,SUP-IND-065,2020-07-12 17:58:34
+4,PRD-IND-00004,Smartphones Model R416,Electronics & Gadgets,Smartphones,Reliance Vantage,26160.0,53277.87,0.509,SUP-IND-082,2021-06-16 07:53:37
+5,PRD-IND-00005,Smartphones Model L683,Electronics & Gadgets,Smartphones,Bajaj Echo,20112.58,28925.2,0.3047,SUP-IND-081,2022-09-11 16:43:14
+6,PRD-IND-00006,Smartphones Model E727,Electronics & Gadgets,Smartphones,Reliance Vantage,19122.77,25273.37,0.2434,SUP-IND-020,2020-11-22 03:47:20
+7,PRD-IND-00007,Laptops Model D381,Electronics & Gadgets,Laptops,Tata Apex,26251.21,57189.47,0.541,SUP-IND-096,2020-12-10 11:13:29
+8,PRD-IND-00008,Laptops Model V239,Electronics & Gadgets,Laptops,Godrej Lumina,20100.52,31761.35,0.3671,SUP-IND-076,2021-10-14 12:49:04
+9,PRD-IND-00009,Laptops Model O351,Electronics & Gadgets,Laptops,Mahindra Nexus,34730.99,63345.22,0.4517,SUP-IND-031,2020-03-29 02:55:03
+10,PRD-IND-00010,Laptops Model V866,Electronics & Gadgets,Laptops,ITC Omni,25673.79,48565.98,0.4714,SUP-IND-027,2023-09-13 22:05:41
+11,PRD-IND-00011,Laptops Model O858,Electronics & Gadgets,Laptops,Mahindra Nexus,8672.41,17741.63,0.5112,SUP-IND-069,2022-07-09 07:50:29
+12,PRD-IND-00012,Laptops Model B870,Electronics & Gadgets,Laptops,Bajaj Echo,5804.21,10662.66,0.4557,SUP-IND-076,2020-11-30 16:12:27
+13,PRD-IND-00013,Audio & Headphones Model T281,Electronics & Gadgets,Audio & Headphones,Godrej Lumina,44937.65,70762.48,0.365,SUP-IND-018,2023-11-30 22:30:43
+14,PRD-IND-00014,Audio & Headphones Model G322,Electronics & Gadgets,Audio & Headphones,Wipro Spectrum,4868.96,6892.33,0.2936,SUP-IND-077,2021-09-12 03:23:15
+15,PRD-IND-00015,Audio & Headphones Model D324,Electronics & Gadgets,Audio & Headphones,Tata Apex,30091.47,40044.62,0.2486,SUP-IND-013,2022-10-20 17:10:58
+16,PRD-IND-00016,Audio & Headphones Model T550,Electronics & Gadgets,Audio & Headphones,Godrej Lumina,23825.79,41478.56,0.4256,SUP-IND-035,2020-12-18 17:28:14
+17,PRD-IND-00017,Audio & Headphones Model Q622,Electronics & Gadgets,Audio & Headphones,Bajaj Echo,39241.71,65329.53,0.3993,SUP-IND-040,2020-09-28 17:38:24
+18,PRD-IND-00018,Audio & Headphones Model P509,Electronics & Gadgets,Audio & Headphones,Aditya Horizon,39339.48,61652.11,0.3619,SUP-IND-096,2020-04-19 16:33:01
+19,PRD-IND-00019,Smartwatches Model E822,Electronics & Gadgets,Smartwatches,Godrej Lumina,16066.38,30292.03,0.4696,SUP-IND-052,2021-04-01 16:39:51
+20,PRD-IND-00020,Smartwatches Model J175,Electronics & Gadgets,Smartwatches,Bajaj Echo,44133.78,69103.98,0.3613,SUP-IND-084,2022-01-12 16:02:04
+21,PRD-IND-00021,Smartwatches Model O323,Electronics & Gadgets,Smartwatches,Bajaj Echo,26728.43,48632.92,0.4504,SUP-IND-031,2020-02-17 07:57:32
+22,PRD-IND-00022,Smartwatches Model Q954,Electronics & Gadgets,Smartwatches,Aditya Horizon,10074.18,21514.56,0.5318,SUP-IND-031,2022-02-07 22:38:32
+23,PRD-IND-00023,Smartwatches Model R443,Electronics & Gadgets,Smartwatches,Aditya Horizon,4260.78,5378.73,0.2078,SUP-IND-029,2023-10-10 07:04:35
+24,PRD-IND-00024,Smartwatches Model G436,Electronics & Gadgets,Smartwatches,Wipro Spectrum,10815.59,21134.92,0.4883,SUP-IND-061,2021-09-19 19:27:41
+25,PRD-IND-00025,Home Appliances Model Q738,Electronics & Gadgets,Home Appliances,Reliance Vantage,14327.45,24450.95,0.414,SUP-IND-046,2021-01-13 21:25:18
+26,PRD-IND-00026,Home Appliances Model P768,Electronics & Gadgets,Home Appliances,Aditya Horizon,3586.4,4521.64,0.2068,SUP-IND-022,2020-02-03 08:21:19
+27,PRD-IND-00027,Home Appliances Model T133,Electronics & Gadgets,Home Appliances,Tata Apex,17032.15,28051.67,0.3928,SUP-IND-051,2022-12-10 21:21:02
+28,PRD-IND-00028,Home Appliances Model G300,Electronics & Gadgets,Home Appliances,Bajaj Echo,26744.1,38621.69,0.3075,SUP-IND-095,2022-06-23 03:58:58
+29,PRD-IND-00029,Home Appliances Model H956,Electronics & Gadgets,Home Appliances,Tata Apex,41561.74,72207.15,0.4244,SUP-IND-062,2022-09-26 21:06:08
+30,PRD-IND-00030,Home Appliances Model X534,Electronics & Gadgets,Home Appliances,Godrej Lumina,17162.26,27877.44,0.3844,SUP-IND-078,2022-03-28 06:14:57
+31,PRD-IND-00031,Ethnic Wear & Sarees Model S959,Apparel & Fashion,Ethnic Wear & Sarees,ITC Omni,36093.07,54236.57,0.3345,SUP-IND-044,2023-02-12 07:38:35
+32,PRD-IND-00032,Ethnic Wear & Sarees Model I627,Apparel & Fashion,Ethnic Wear & Sarees,Bajaj Echo,38233.8,60236.0,0.3653,SUP-IND-052,2021-05-08 04:54:09
+33,PRD-IND-00033,Ethnic Wear & Sarees Model J288,Apparel & Fashion,Ethnic Wear & Sarees,ITC Omni,20627.56,38389.56,0.4627,SUP-IND-018,2021-06-10 15:44:04
+34,PRD-IND-00034,Ethnic Wear & Sarees Model R189,Apparel & Fashion,Ethnic Wear & Sarees,Tata Apex,37820.24,80440.7,0.5298,SUP-IND-091,2021-07-12 02:47:20
+35,PRD-IND-00035,Ethnic Wear & Sarees Model F942,Apparel & Fashion,Ethnic Wear & Sarees,Godrej Lumina,29014.91,61241.09,0.5262,SUP-IND-072,2022-01-24 07:45:52
+36,PRD-IND-00036,Ethnic Wear & Sarees Model L531,Apparel & Fashion,Ethnic Wear & Sarees,Tata Apex,5173.36,9871.83,0.4759,SUP-IND-051,2020-12-12 06:16:37
+37,PRD-IND-00037,Men's Wear Model U520,Apparel & Fashion,Men's Wear,Godrej Lumina,374.11,804.14,0.5348,SUP-IND-070,2020-03-02 03:43:46
+38,PRD-IND-00038,Men's Wear Model N368,Apparel & Fashion,Men's Wear,Mahindra Nexus,25853.28,35910.12,0.2801,SUP-IND-094,2021-05-08 21:31:10
+39,PRD-IND-00039,Men's Wear Model G987,Apparel & Fashion,Men's Wear,Tata Apex,11068.65,14520.16,0.2377,SUP-IND-034,2021-06-14 10:23:31
+40,PRD-IND-00040,Men's Wear Model G903,Apparel & Fashion,Men's Wear,Aditya Horizon,27112.45,34693.05,0.2185,SUP-IND-041,2023-06-13 13:23:46
+41,PRD-IND-00041,Men's Wear Model F525,Apparel & Fashion,Men's Wear,Mahindra Nexus,6239.71,12139.98,0.486,SUP-IND-058,2020-12-03 04:42:16
+42,PRD-IND-00042,Men's Wear Model O328,Apparel & Fashion,Men's Wear,Reliance Vantage,30870.2,64042.69,0.518,SUP-IND-071,2022-06-26 05:09:52
+43,PRD-IND-00043,Women's Western Model E376,Apparel & Fashion,Women's Western,Godrej Lumina,3975.47,6972.88,0.4299,SUP-IND-066,2021-01-22 12:32:13
+44,PRD-IND-00044,Women's Western Model U499,Apparel & Fashion,Women's Western,Tata Apex,7791.56,10738.98,0.2745,SUP-IND-080,2021-05-01 19:50:01
+45,PRD-IND-00045,Women's Western Model V661,Apparel & Fashion,Women's Western,Bajaj Echo,10778.49,16189.53,0.3342,SUP-IND-066,2020-08-31 05:12:48
+46,PRD-IND-00046,Women's Western Model U771,Apparel & Fashion,Women's Western,Aditya Horizon,7308.44,10340.19,0.2932,SUP-IND-068,2021-11-18 05:51:30
+47,PRD-IND-00047,Women's Western Model O503,Apparel & Fashion,Women's Western,Reliance Vantage,41152.49,53164.97,0.2259,SUP-IND-074,2021-01-18 22:29:19
+48,PRD-IND-00048,Women's Western Model P378,Apparel & Fashion,Women's Western,Aditya Horizon,9129.35,16279.43,0.4392,SUP-IND-044,2021-02-11 08:14:28
+49,PRD-IND-00049,Footwear Model I961,Apparel & Fashion,Footwear,Godrej Lumina,18111.49,31282.09,0.421,SUP-IND-098,2022-05-28 19:34:16
+50,PRD-IND-00050,Footwear Model F604,Apparel & Fashion,Footwear,Reliance Vantage,44864.68,86788.25,0.4831,SUP-IND-086,2022-04-30 05:34:14
+51,PRD-IND-00051,Footwear Model S668,Apparel & Fashion,Footwear,Mahindra Nexus,28886.65,56628.73,0.4899,SUP-IND-097,2020-01-21 02:48:38
+52,PRD-IND-00052,Footwear Model Z213,Apparel & Fashion,Footwear,ITC Omni,35924.16,60872.24,0.4098,SUP-IND-042,2023-01-11 03:58:12
+53,PRD-IND-00053,Footwear Model L175,Apparel & Fashion,Footwear,Tata Apex,26346.52,52044.52,0.4938,SUP-IND-035,2023-01-02 01:08:53
+54,PRD-IND-00054,Footwear Model U733,Apparel & Fashion,Footwear,Bajaj Echo,11794.18,25447.59,0.5365,SUP-IND-094,2021-06-30 22:31:53
+55,PRD-IND-00055,Fashion Accessories Model Q600,Apparel & Fashion,Fashion Accessories,ITC Omni,38789.85,76554.92,0.4933,SUP-IND-055,2020-08-07 16:45:30
+56,PRD-IND-00056,Fashion Accessories Model H596,Apparel & Fashion,Fashion Accessories,Reliance Vantage,11610.51,23819.26,0.5126,SUP-IND-029,2023-05-18 12:00:19
+57,PRD-IND-00057,Fashion Accessories Model C782,Apparel & Fashion,Fashion Accessories,Reliance Vantage,15366.96,30275.01,0.4924,SUP-IND-043,2020-01-13 00:51:20
+58,PRD-IND-00058,Fashion Accessories Model J183,Apparel & Fashion,Fashion Accessories,Wipro Spectrum,1890.01,2400.39,0.2126,SUP-IND-047,2022-07-21 09:59:43
+59,PRD-IND-00059,Fashion Accessories Model R976,Apparel & Fashion,Fashion Accessories,Tata Apex,23887.51,43402.59,0.4496,SUP-IND-093,2023-06-02 16:58:22
+60,PRD-IND-00060,Fashion Accessories Model M677,Apparel & Fashion,Fashion Accessories,Godrej Lumina,43287.62,55095.24,0.2143,SUP-IND-045,2022-12-31 01:30:06
+61,PRD-IND-00061,Furniture Model N132,Home & Living,Furniture,Godrej Lumina,16734.23,24392.95,0.314,SUP-IND-086,2020-02-05 04:56:14
+62,PRD-IND-00062,Furniture Model U448,Home & Living,Furniture,ITC Omni,13062.92,21384.62,0.3891,SUP-IND-024,2022-04-22 07:47:16
+63,PRD-IND-00063,Furniture Model R565,Home & Living,Furniture,Tata Apex,6384.18,9877.01,0.3536,SUP-IND-075,2023-01-01 23:55:44
+64,PRD-IND-00064,Furniture Model J215,Home & Living,Furniture,Aditya Horizon,20252.73,31630.78,0.3597,SUP-IND-097,2022-10-10 06:02:22
+65,PRD-IND-00065,Furniture Model H138,Home & Living,Furniture,ITC Omni,29197.09,50627.89,0.4233,SUP-IND-025,2020-06-21 01:56:16
+66,PRD-IND-00066,Furniture Model T348,Home & Living,Furniture,Bajaj Echo,5173.82,9669.31,0.4649,SUP-IND-013,2021-06-17 03:04:54
+67,PRD-IND-00067,Cookware & Kitchen Model V298,Home & Living,Cookware & Kitchen,Reliance Vantage,44537.22,60945.13,0.2692,SUP-IND-015,2022-07-17 08:13:38
+68,PRD-IND-00068,Cookware & Kitchen Model M927,Home & Living,Cookware & Kitchen,ITC Omni,803.09,1255.04,0.3601,SUP-IND-058,2021-11-02 00:31:23
+69,PRD-IND-00069,Cookware & Kitchen Model F737,Home & Living,Cookware & Kitchen,Tata Apex,7647.14,12419.72,0.3843,SUP-IND-029,2020-06-08 19:20:15
+70,PRD-IND-00070,Cookware & Kitchen Model H709,Home & Living,Cookware & Kitchen,Mahindra Nexus,36884.21,53718.06,0.3134,SUP-IND-023,2020-02-01 04:13:43
+71,PRD-IND-00071,Cookware & Kitchen Model I672,Home & Living,Cookware & Kitchen,Aditya Horizon,21486.71,40456.74,0.4689,SUP-IND-097,2020-03-18 09:49:36
+72,PRD-IND-00072,Cookware & Kitchen Model T452,Home & Living,Cookware & Kitchen,Tata Apex,19061.67,32900.04,0.4206,SUP-IND-054,2021-09-16 21:18:22
+73,PRD-IND-00073,Bedding & Linen Model C866,Home & Living,Bedding & Linen,Wipro Spectrum,17476.24,30229.55,0.4219,SUP-IND-011,2020-11-26 22:28:50
+74,PRD-IND-00074,Bedding & Linen Model C482,Home & Living,Bedding & Linen,Mahindra Nexus,5791.77,7838.2,0.2611,SUP-IND-090,2023-04-07 08:23:30
+75,PRD-IND-00075,Bedding & Linen Model Y927,Home & Living,Bedding & Linen,Tata Apex,17891.22,37457.57,0.5224,SUP-IND-069,2021-11-23 07:10:50
+76,PRD-IND-00076,Bedding & Linen Model N717,Home & Living,Bedding & Linen,Tata Apex,21089.89,28681.76,0.2647,SUP-IND-010,2022-06-30 03:08:03
+77,PRD-IND-00077,Bedding & Linen Model N231,Home & Living,Bedding & Linen,Aditya Horizon,486.99,1058.6,0.54,SUP-IND-030,2022-01-10 23:37:06
+78,PRD-IND-00078,Bedding & Linen Model C251,Home & Living,Bedding & Linen,Wipro Spectrum,44454.46,57548.58,0.2275,SUP-IND-022,2022-09-12 16:25:24
+79,PRD-IND-00079,Home Decor Model E271,Home & Living,Home Decor,Aditya Horizon,13430.1,19008.28,0.2935,SUP-IND-054,2023-08-19 09:44:09
+80,PRD-IND-00080,Home Decor Model B737,Home & Living,Home Decor,Godrej Lumina,35373.06,70935.53,0.5013,SUP-IND-072,2020-04-25 13:57:00
+81,PRD-IND-00081,Home Decor Model H935,Home & Living,Home Decor,Aditya Horizon,36196.86,56552.77,0.3599,SUP-IND-082,2022-08-07 03:41:18
+82,PRD-IND-00082,Home Decor Model J863,Home & Living,Home Decor,ITC Omni,3645.12,7937.62,0.5408,SUP-IND-024,2023-07-06 13:05:49
+83,PRD-IND-00083,Home Decor Model S419,Home & Living,Home Decor,Mahindra Nexus,25741.61,43715.42,0.4112,SUP-IND-069,2023-05-23 16:07:36
+84,PRD-IND-00084,Home Decor Model R235,Home & Living,Home Decor,Godrej Lumina,16166.35,28992.21,0.4424,SUP-IND-033,2023-08-22 09:11:18
+85,PRD-IND-00085,Pooja & Spiritual Essentials Model B542,Home & Living,Pooja & Spiritual Essentials,Bajaj Echo,15904.19,29123.65,0.4539,SUP-IND-053,2022-07-26 04:08:25
+86,PRD-IND-00086,Pooja & Spiritual Essentials Model C617,Home & Living,Pooja & Spiritual Essentials,Godrej Lumina,44142.28,85815.16,0.4856,SUP-IND-015,2022-10-06 23:29:34
+87,PRD-IND-00087,Pooja & Spiritual Essentials Model I388,Home & Living,Pooja & Spiritual Essentials,Tata Apex,41509.22,56793.39,0.2691,SUP-IND-050,2021-02-06 21:55:20
+88,PRD-IND-00088,Pooja & Spiritual Essentials Model X441,Home & Living,Pooja & Spiritual Essentials,ITC Omni,10080.38,18605.94,0.4582,SUP-IND-026,2023-11-02 17:39:01
+89,PRD-IND-00089,Pooja & Spiritual Essentials Model S453,Home & Living,Pooja & Spiritual Essentials,Reliance Vantage,2125.85,3679.07,0.4222,SUP-IND-044,2020-03-22 09:19:46
+90,PRD-IND-00090,Pooja & Spiritual Essentials Model T756,Home & Living,Pooja & Spiritual Essentials,Bajaj Echo,38298.11,81670.38,0.5311,SUP-IND-024,2023-11-19 04:47:55
+91,PRD-IND-00091,Ayurvedic & Skincare Model I993,Beauty & Personal Care,Ayurvedic & Skincare,Godrej Lumina,4311.73,8040.51,0.4637,SUP-IND-012,2023-05-17 20:24:11
+92,PRD-IND-00092,Ayurvedic & Skincare Model V453,Beauty & Personal Care,Ayurvedic & Skincare,ITC Omni,33051.15,42200.77,0.2168,SUP-IND-040,2021-04-20 02:09:56
+93,PRD-IND-00093,Ayurvedic & Skincare Model R437,Beauty & Personal Care,Ayurvedic & Skincare,Reliance Vantage,9352.89,14728.9,0.365,SUP-IND-073,2020-01-02 15:30:58
+94,PRD-IND-00094,Ayurvedic & Skincare Model K348,Beauty & Personal Care,Ayurvedic & Skincare,Wipro Spectrum,27325.18,48497.35,0.4366,SUP-IND-080,2021-11-01 09:34:45
+95,PRD-IND-00095,Ayurvedic & Skincare Model S650,Beauty & Personal Care,Ayurvedic & Skincare,Wipro Spectrum,39302.96,51178.08,0.232,SUP-IND-028,2023-07-05 22:44:55
+96,PRD-IND-00096,Ayurvedic & Skincare Model E371,Beauty & Personal Care,Ayurvedic & Skincare,Wipro Spectrum,2118.64,4433.15,0.5221,SUP-IND-040,2023-08-26 10:13:46
+97,PRD-IND-00097,Personal Grooming Model X908,Beauty & Personal Care,Personal Grooming,ITC Omni,11856.29,17654.27,0.3284,SUP-IND-095,2021-11-25 20:21:52
+98,PRD-IND-00098,Personal Grooming Model V376,Beauty & Personal Care,Personal Grooming,Wipro Spectrum,28112.87,50095.14,0.4388,SUP-IND-073,2020-11-25 10:29:50
+99,PRD-IND-00099,Personal Grooming Model K686,Beauty & Personal Care,Personal Grooming,Reliance Vantage,23779.31,51176.37,0.5353,SUP-IND-045,2020-07-04 21:27:20
+100,PRD-IND-00100,Personal Grooming Model Q489,Beauty & Personal Care,Personal Grooming,Godrej Lumina,20327.05,30362.58,0.3305,SUP-IND-040,2023-09-22 14:50:12
+101,PRD-IND-00101,Personal Grooming Model Y559,Beauty & Personal Care,Personal Grooming,Bajaj Echo,33282.87,62865.57,0.4706,SUP-IND-017,2020-03-03 04:23:04
+102,PRD-IND-00102,Personal Grooming Model N766,Beauty & Personal Care,Personal Grooming,Tata Apex,38426.93,67616.92,0.4317,SUP-IND-057,2020-03-09 00:10:52
+103,PRD-IND-00103,Cosmetics Model D157,Beauty & Personal Care,Cosmetics,Reliance Vantage,16942.72,25931.99,0.3466,SUP-IND-045,2022-07-25 12:40:41
+104,PRD-IND-00104,Cosmetics Model A526,Beauty & Personal Care,Cosmetics,Godrej Lumina,9853.93,21389.65,0.5393,SUP-IND-050,2022-07-19 23:58:03
+105,PRD-IND-00105,Cosmetics Model J672,Beauty & Personal Care,Cosmetics,Wipro Spectrum,8229.67,13023.05,0.3681,SUP-IND-034,2023-07-25 22:47:19
+106,PRD-IND-00106,Cosmetics Model G541,Beauty & Personal Care,Cosmetics,Mahindra Nexus,14975.24,20314.54,0.2628,SUP-IND-072,2023-09-08 22:39:45
+107,PRD-IND-00107,Cosmetics Model B432,Beauty & Personal Care,Cosmetics,Godrej Lumina,21994.52,31736.25,0.307,SUP-IND-076,2022-09-10 09:36:04
+108,PRD-IND-00108,Cosmetics Model V489,Beauty & Personal Care,Cosmetics,Godrej Lumina,26390.45,43035.76,0.3868,SUP-IND-041,2022-03-14 11:09:55
+109,PRD-IND-00109,Wellness & Health Model V933,Beauty & Personal Care,Wellness & Health,Bajaj Echo,38600.82,57930.01,0.3337,SUP-IND-060,2023-03-06 11:50:49
+110,PRD-IND-00110,Wellness & Health Model B245,Beauty & Personal Care,Wellness & Health,Reliance Vantage,13256.84,24305.24,0.4546,SUP-IND-057,2021-05-05 06:13:52
+111,PRD-IND-00111,Wellness & Health Model H766,Beauty & Personal Care,Wellness & Health,Godrej Lumina,3909.72,6006.19,0.3491,SUP-IND-029,2023-08-31 13:28:08
+112,PRD-IND-00112,Wellness & Health Model X718,Beauty & Personal Care,Wellness & Health,Reliance Vantage,3285.73,4529.67,0.2746,SUP-IND-085,2021-07-27 20:46:00
+113,PRD-IND-00113,Wellness & Health Model H456,Beauty & Personal Care,Wellness & Health,Mahindra Nexus,44469.35,89439.58,0.5028,SUP-IND-046,2021-01-04 21:22:08
+114,PRD-IND-00114,Wellness & Health Model I109,Beauty & Personal Care,Wellness & Health,Bajaj Echo,20650.67,34772.5,0.4061,SUP-IND-068,2021-11-18 20:17:10
+115,PRD-IND-00115,Spices & Atta Model E734,Groceries & Pantry,Spices & Atta,Reliance Vantage,9075.98,15393.89,0.4104,SUP-IND-042,2021-01-06 17:43:06
+116,PRD-IND-00116,Spices & Atta Model H432,Groceries & Pantry,Spices & Atta,Reliance Vantage,29848.68,59137.62,0.4953,SUP-IND-093,2020-05-14 15:03:32
+117,PRD-IND-00117,Spices & Atta Model P601,Groceries & Pantry,Spices & Atta,Bajaj Echo,18636.51,30939.89,0.3977,SUP-IND-065,2022-07-24 09:38:12
+118,PRD-IND-00118,Spices & Atta Model U283,Groceries & Pantry,Spices & Atta,Wipro Spectrum,24796.35,51203.15,0.5157,SUP-IND-052,2023-10-31 12:20:32
+119,PRD-IND-00119,Spices & Atta Model P799,Groceries & Pantry,Spices & Atta,Aditya Horizon,11852.96,14844.21,0.2015,SUP-IND-035,2021-06-09 18:46:19
+120,PRD-IND-00120,Spices & Atta Model Q229,Groceries & Pantry,Spices & Atta,Aditya Horizon,7258.35,12347.84,0.4122,SUP-IND-060,2020-07-12 05:30:33
+121,PRD-IND-00121,Beverages & Tea Model R726,Groceries & Pantry,Beverages & Tea,Mahindra Nexus,15955.63,28679.63,0.4437,SUP-IND-058,2020-09-11 01:12:30
+122,PRD-IND-00122,Beverages & Tea Model J769,Groceries & Pantry,Beverages & Tea,Reliance Vantage,28648.25,45864.87,0.3754,SUP-IND-063,2020-08-09 00:24:29
+123,PRD-IND-00123,Beverages & Tea Model I326,Groceries & Pantry,Beverages & Tea,Bajaj Echo,2388.08,3719.59,0.358,SUP-IND-064,2022-05-11 06:03:23
+124,PRD-IND-00124,Beverages & Tea Model K557,Groceries & Pantry,Beverages & Tea,Tata Apex,10160.71,18340.53,0.446,SUP-IND-053,2021-12-21 23:41:58
+125,PRD-IND-00125,Beverages & Tea Model Z358,Groceries & Pantry,Beverages & Tea,Reliance Vantage,13003.14,26788.09,0.5146,SUP-IND-063,2023-10-17 17:42:17
+126,PRD-IND-00126,Beverages & Tea Model Z580,Groceries & Pantry,Beverages & Tea,Tata Apex,14274.77,22385.62,0.3623,SUP-IND-048,2020-03-19 00:56:27
+127,PRD-IND-00127,Snacks & Sweets Model J315,Groceries & Pantry,Snacks & Sweets,Wipro Spectrum,19519.59,31796.02,0.3861,SUP-IND-026,2021-12-01 13:47:34
+128,PRD-IND-00128,Snacks & Sweets Model F813,Groceries & Pantry,Snacks & Sweets,Tata Apex,4819.57,8675.64,0.4445,SUP-IND-033,2023-11-03 07:10:20
+129,PRD-IND-00129,Snacks & Sweets Model I383,Groceries & Pantry,Snacks & Sweets,Bajaj Echo,6092.34,8633.01,0.2943,SUP-IND-010,2023-05-28 06:16:28
+130,PRD-IND-00130,Snacks & Sweets Model Q321,Groceries & Pantry,Snacks & Sweets,Aditya Horizon,10332.24,20740.32,0.5018,SUP-IND-033,2021-11-29 08:45:06
+131,PRD-IND-00131,Snacks & Sweets Model K811,Groceries & Pantry,Snacks & Sweets,Mahindra Nexus,21024.29,33825.52,0.3784,SUP-IND-078,2020-06-07 23:40:32
+132,PRD-IND-00132,Snacks & Sweets Model N704,Groceries & Pantry,Snacks & Sweets,Bajaj Echo,27117.94,55684.14,0.513,SUP-IND-033,2020-06-28 17:14:24
+133,PRD-IND-00133,Organic Staples Model F135,Groceries & Pantry,Organic Staples,Aditya Horizon,24390.81,45327.8,0.4619,SUP-IND-028,2023-03-12 01:49:39
+134,PRD-IND-00134,Organic Staples Model I531,Groceries & Pantry,Organic Staples,Bajaj Echo,4634.2,9697.43,0.5221,SUP-IND-025,2023-09-21 06:57:12
+135,PRD-IND-00135,Organic Staples Model F890,Groceries & Pantry,Organic Staples,Wipro Spectrum,37313.14,48679.17,0.2335,SUP-IND-069,2020-05-10 14:03:11
+136,PRD-IND-00136,Organic Staples Model Q759,Groceries & Pantry,Organic Staples,Wipro Spectrum,4623.69,8405.76,0.4499,SUP-IND-023,2023-05-22 01:00:59
+137,PRD-IND-00137,Organic Staples Model W353,Groceries & Pantry,Organic Staples,Reliance Vantage,17159.45,35420.51,0.5156,SUP-IND-066,2020-04-12 09:33:45
+138,PRD-IND-00138,Organic Staples Model O517,Groceries & Pantry,Organic Staples,Aditya Horizon,2601.92,4233.64,0.3854,SUP-IND-090,2021-07-10 03:47:45
+139,PRD-IND-00139,Gourmet Foods Model T469,Groceries & Pantry,Gourmet Foods,Bajaj Echo,16540.23,35146.62,0.5294,SUP-IND-054,2022-04-05 10:28:42
+140,PRD-IND-00140,Gourmet Foods Model W779,Groceries & Pantry,Gourmet Foods,Tata Apex,34558.52,45346.43,0.2379,SUP-IND-072,2022-09-19 15:08:08
+141,PRD-IND-00141,Gourmet Foods Model N139,Groceries & Pantry,Gourmet Foods,Aditya Horizon,5088.05,8960.18,0.4321,SUP-IND-050,2022-06-15 06:29:02
+142,PRD-IND-00142,Gourmet Foods Model Q928,Groceries & Pantry,Gourmet Foods,ITC Omni,350.18,505.68,0.3075,SUP-IND-060,2023-09-16 14:17:23
+143,PRD-IND-00143,Gourmet Foods Model W299,Groceries & Pantry,Gourmet Foods,Bajaj Echo,27001.46,44536.56,0.3937,SUP-IND-097,2022-09-28 07:27:23
+144,PRD-IND-00144,Gourmet Foods Model S546,Groceries & Pantry,Gourmet Foods,Aditya Horizon,4581.52,8282.94,0.4469,SUP-IND-029,2023-09-10 19:47:47

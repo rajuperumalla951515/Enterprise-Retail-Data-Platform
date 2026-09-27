@@ -1,0 +1,7 @@
+event_type,total_sessions,total_events,unique_customers
+product_click,12330,12404,2457
+page_view,22271,22562,2499
+add_to_cart,7509,7533,2276
+purchase,1927,1929,1179
+remove_from_cart,2522,2527,1368
+checkout_init,3041,3045,1554

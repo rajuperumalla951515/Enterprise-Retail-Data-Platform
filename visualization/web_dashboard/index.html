@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Retail Data Platform - Executive Analytics</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- PapaParse CDN for Backend CSV Fetching -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- AlaSQL Real In-Browser SQL Engine CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/alasql@4"></script>
+</head>
+<body>
+
+  <!-- Subtle Top Progress Shimmer Bar -->
+  <div id="topProgressBar" class="top-progress-bar hidden">
+    <div class="top-progress-bar-fill"></div>
+  </div>
+
+  <!-- Top Announcement / Environment Status Bar -->
+  <div class="top-bar">
+    <div class="top-bar-left">
+      <span class="environment-pill">Enterprise Production</span>
+      <span>Enterprise Retail Data Platform • Operations & Analytics Hub</span>
+    </div>
+    <div>
+      <span id="topBarStatusText">Live DW Sync Active • Last Updated: FY 2024</span>
+    </div>
+  </div>
+
+  <!-- Navbar Header -->
+  <header class="navbar">
+    <div class="brand">
+      <div class="brand-icon" id="brandLogoIcon">
+        <img src="assets/logo.png" alt="Enterprise Retail Data Platform Logo" id="brandLogoImg" class="brand-logo-img">
+      </div>
+      <div>
+        <h1 class="brand-title">Enterprise Retail Data Platform</h1>
+        <div class="brand-subtitle">Executive Analytics & Supply Chain Command Center</div>
+      </div>
+    </div>
+    
+    <nav class="nav-tabs">
+      <button class="tab-btn active" data-tab="overview">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"></path></svg>
+        Executive Overview
+      </button>
+      <button class="tab-btn" data-tab="marts">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+        Analytical Data Marts
+      </button>
+      <button class="tab-btn" data-tab="pipeline">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+        Pipeline Monitor
+      </button>
+      <button class="tab-btn" data-tab="sql">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+        SQL Console
+      </button>
+    </nav>
+  </header>
+
+  <!-- Filter Bar -->
+  <div class="filter-bar">
+    <div class="filter-group">
+      <div class="filter-item">
+        <span class="filter-label">Region:</span>
+        <select class="filter-select" id="regionFilter">
+          <option value="All India">All India (25 Store Hubs)</option>
+          <option value="North India">North India</option>
+          <option value="South India">South India</option>
+          <option value="West India">West India</option>
+          <option value="East & Central India">East & Central India</option>
+          <option value="North East India">North East India</option>
+        </select>
+      </div>
+
+      <div class="filter-item">
+        <span class="filter-label">Store Format:</span>
+        <select class="filter-select" id="formatFilter">
+          <option value="All Formats">All Formats</option>
+          <option value="Flagship Mega Mart">Flagship Mega Mart</option>
+          <option value="High-Street Retail">High-Street Retail</option>
+          <option value="Express City Outlet">Express City Outlet</option>
+        </select>
+      </div>
+
+      <div class="filter-item">
+        <span class="filter-label">Fiscal Year:</span>
+        <select class="filter-select" id="yearFilter">
+          <option value="FY 2024">FY 2024</option>
+          <option value="FY 2023">FY 2023</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="btn-primary" onclick="window.print()">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+      Export Executive Report
+    </button>
+  </div>
+
+  <main class="container">
+
+    <!-- TAB 1: EXECUTIVE OVERVIEW -->
+    <section id="overview" class="tab-content active">
+      
+      <!-- KPI Grid -->
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Gross Revenue</span>
+            <div class="kpi-icon" style="background: #e8f0fe; color: var(--primary-blue);">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+          </div>
+          <div class="kpi-value" id="kpiGrossRevenue">₹33.86 Cr</div>
+          <div class="kpi-footer">
+            <span class="badge-trend up">↑ +14.2%</span>
+            <span class="kpi-subtext">vs prior fiscal year</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Net Profit</span>
+            <div class="kpi-icon" style="background: #e6f4ea; color: var(--accent-emerald);">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+            </div>
+          </div>
+          <div class="kpi-value" id="kpiNetProfit">₹11.64 Cr</div>
+          <div class="kpi-footer">
+            <span class="badge-trend up">↑ +16.8%</span>
+            <span class="kpi-subtext" id="kpiMarginSubtext">34.4% Net Margin</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Total Orders</span>
+            <div class="kpi-icon" style="background: #eef2ff; color: var(--accent-indigo);">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            </div>
+          </div>
+          <div class="kpi-value" id="kpiTotalOrders">12,060</div>
+          <div class="kpi-footer">
+            <span class="badge-trend up">↑ +8.5%</span>
+            <span class="kpi-subtext" id="kpiAOVSubtext">AOV: ₹28,077</span>
+          </div>
+        </div>
+
+        <div class="kpi-card">
+          <div class="kpi-header">
+            <span class="kpi-title">Stock Out Risk</span>
+            <div class="kpi-icon" style="background: #fce8e6; color: var(--accent-rose);">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+          </div>
+          <div class="kpi-value" id="kpiStockRisk">142 SKUs</div>
+          <div class="kpi-footer">
+            <span class="badge-trend down">↓ Action Req.</span>
+            <span class="kpi-subtext">Below safety stock</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Charts Grid -->
+      <div class="charts-grid">
+        <div class="chart-card col-8">
+          <div class="card-title-group">
+            <h3 class="card-title">Monthly Revenue & Net Profit Growth (FY 2024)</h3>
+            <span class="status-badge badge-info">Star Schema FactSales</span>
+          </div>
+          <div class="chart-container">
+            <canvas id="salesTrendChart"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-card col-4">
+          <div class="card-title-group">
+            <h3 class="card-title">Revenue Share by Category</h3>
+            <span class="status-badge badge-info">dim_product</span>
+          </div>
+          <div class="chart-container">
+            <canvas id="categoryShareChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inventory Alerts Table -->
+      <div class="data-table-card">
+        <div class="card-title-group">
+          <h3 class="card-title">Critical Inventory & Supply Chain Health Alerts</h3>
+          <span class="status-badge badge-danger">dm_inventory_health</span>
+        </div>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Store Location</th>
+                <th>Product Catalog Name</th>
+                <th>Category</th>
+                <th>Current Stock</th>
+                <th>Inventory Status Alert</th>
+              </tr>
+            </thead>
+            <tbody id="inventoryTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: DATA MARTS & ANALYTICS -->
+    <section id="marts" class="tab-content">
+      <div class="charts-grid">
+        <div class="chart-card col-6">
+          <div class="card-title-group">
+            <h3 class="card-title">Customer Behavioral RFM Segmentation</h3>
+            <span class="status-badge badge-info">dm_customer_rfm_segmentation</span>
+          </div>
+          <div class="chart-container">
+            <canvas id="rfmChart"></canvas>
+          </div>
+        </div>
+
+        <div class="chart-card col-6">
+          <div class="card-title-group">
+            <h3 class="card-title">Web Clickstream Conversion Funnel</h3>
+            <span class="status-badge badge-info">dm_conversion_funnel</span>
+          </div>
+          <div class="chart-container">
+            <canvas id="funnelChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Mart Interactive Table Explorer -->
+      <div class="data-table-card">
+        <div class="table-toolbar">
+          <div class="card-title-group">
+            <h3 class="card-title">Analytical Data Mart Explorer</h3>
+          </div>
+          <div class="sub-tabs">
+            <button class="sub-tab-btn active" data-mart="sales">Monthly Sales Performance</button>
+            <button class="sub-tab-btn" data-mart="customer">RFM Customer Segmentation</button>
+            <button class="sub-tab-btn" data-mart="inventory">Inventory Health</button>
+            <button class="sub-tab-btn" data-mart="funnel">Web Conversion Funnel</button>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table>
+            <thead id="martTableHead">
+              <tr>
+                <th>Month</th>
+                <th>Gross Revenue</th>
+                <th>Net Profit</th>
+                <th>Profit Margin %</th>
+              </tr>
+            </thead>
+            <tbody id="martTableBody">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: PIPELINE MONITOR -->
+    <section id="pipeline" class="tab-content">
+      <div class="charts-grid">
+        <div class="chart-card col-6">
+          <h3 class="card-title" style="margin-bottom:1.25rem;">⚡ Data Architecture & Pipeline Execution Flow</h3>
+          <div class="timeline">
+            <div class="timeline-step">
+              <h4 style="color:var(--primary-blue);">1. Multi-Source Raw Ingestion</h4>
+              <p style="color:var(--text-secondary); font-size:0.875rem; margin-top:0.25rem;">Extracting raw structured datasets (25 Store Hubs across India, Product Catalog, Customer Profiles, Orders, Items, Inventory) and 50,000 semi-structured JSON clickstream records.</p>
+            </div>
+            <div class="timeline-step">
+              <h4 style="color:var(--accent-indigo);">2. Data Staging & Cleaning</h4>
+              <p style="color:var(--text-secondary); font-size:0.875rem; margin-top:0.25rem;">Performing deduplication, timestamp casting, payment method normalization (UPI, NetBanking, COD), and loading staging schemas.</p>
+            </div>
+            <div class="timeline-step">
+              <h4 style="color:var(--accent-sky);">3. Star Schema Data Warehouse Modeling</h4>
+              <p style="color:var(--text-secondary); font-size:0.875rem; margin-top:0.25rem;">Building dimension tables (`dim_store`, `dim_product`, `dim_customer`, `dim_date`) and fact tables (`fact_sales`, `fact_inventory_snapshot`, `fact_web_events`) with surrogate keys.</p>
+            </div>
+            <div class="timeline-step">
+              <h4 style="color:var(--accent-emerald);">4. Automated Data Quality Audit</h4>
+              <p style="color:var(--text-secondary); font-size:0.875rem; margin-top:0.25rem;">Running 13 automated checks: null integrity, primary key uniqueness, non-negative value bounds, and foreign key referential integrity (100% Passed).</p>
+            </div>
+            <div class="timeline-step">
+              <h4 style="color:var(--accent-amber);">5. Data Mart Export & Power BI Integration</h4>
+              <p style="color:var(--text-secondary); font-size:0.875rem; margin-top:0.25rem;">Materializing analytical data marts into Parquet & CSV formats for BI reporting.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-card col-6">
+          <h3 class="card-title" style="margin-bottom:1.25rem;">📊 Executive Pipeline Execution Summary</h3>
+          <div class="code-box">
+[STATUS] Raw Ingestion Execution Complete.
+- Ingested Store Locations: 25 Indian retail centers
+- Catalog Items: 144 Product SKUs
+- Customer Profiles: 2,500 profiles
+- Order Records: 12,060 orders (Deduplicated 60 records)
+- Order Line Items: 36,058 item rows
+- Semi-structured Clickstream: 50,000 JSON records
+
+[STATUS] Data Warehouse Star Schema Built.
+- fact_sales: 36,058 records
+- fact_inventory_snapshot: 3,600 records
+- fact_web_events: 50,000 records
+- dim_date: 366 date keys (Year 2024)
+
+[STATUS] Data Quality Audit Suite:
+- Null Value Checks: 3/3 Passed
+- Uniqueness Checks: 3/3 Passed
+- Non-negative Checks: 3/3 Passed
+- Foreign Key Integrity: 4/4 Passed
+- Execution Runtime: 3.26 seconds
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 4: ANTIGRAVITY IDE LIGHT THEME SQL CODE EDITOR WITH RED WAVELINE DIAGNOSTICS -->
+    <section id="sql" class="tab-content">
+      <div class="sql-console-wrapper">
+        
+        <!-- Antigravity IDE Code Editor Panel -->
+        <div class="sql-editor-card ide-editor-card">
+          
+          <!-- IDE Header Bar -->
+          <!-- IDE Header Bar with Tab List & '+' Add Tab Button -->
+          <div class="ide-tab-bar">
+            <div class="ide-file-tabs-container">
+              <div class="ide-file-tabs" id="ideFileTabsList">
+                <!-- Dynamically rendered via JS -->
+              </div>
+              <button class="ide-add-tab-btn" onclick="addNewIDETab()" title="New Query Tab (+)">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+              </button>
+            </div>
+            
+            <div class="ide-header-right">
+              <div class="ide-preset-group">
+                <button class="ide-preset-btn" onclick="loadSampleQuery('stores')">Sample Stores</button>
+                <button class="ide-preset-btn" onclick="loadSampleQuery('revenue')">Monthly Revenue</button>
+                <button class="ide-preset-btn danger" onclick="loadSampleQuery('error')">Test Error Underline</button>
+              </div>
+              <span class="status-badge badge-info">● AlaSQL Engine Active</span>
+            </div>
+          </div>
+
+          <!-- IDE Editor Container (Connected Line Numbers & Underline Overlay) -->
+          <div class="sql-editor-container" id="ideEditorContainer">
+            <div class="sql-line-numbers" id="sqlLineNumbers"></div>
+            <div class="editor-area-wrapper">
+              <div class="sql-code-highlights" id="sqlCodeHighlights" aria-hidden="true"></div>
+              <textarea id="sqlQueryInput" class="sql-textarea" spellcheck="false" placeholder="Enter SQL query here..."></textarea>
+            </div>
+          </div>
+
+          <!-- IDE Inline Error Diagnostic Banner -->
+          <div id="ideErrorDiagnostic" class="ide-error-banner hidden">
+            <div class="ide-error-icon">✕</div>
+            <div class="ide-error-content">
+              <strong id="ideErrorLineMsg">Line 2 Error</strong>: <span id="ideErrorDetailMsg">Syntax error found</span>
+            </div>
+          </div>
+
+          <!-- Actions Bar -->
+          <div class="sql-actions">
+            <div class="ide-shortcuts-hint">
+              Press <kbd>Ctrl + Enter</kbd> to execute • Monospaced IDE Output • Live Syntax Error Highlighting
+            </div>
+            <div style="display:flex; gap:0.5rem;">
+              <button class="btn-secondary" onclick="clearSQLConsole()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                Clear Editor
+              </button>
+              <button class="btn-primary" onclick="executeRealSQL()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                Run Query
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real Terminal Monospaced SQL Console Output Box -->
+        <div class="sql-output-card">
+          <div class="card-title-group" style="margin-bottom:0.75rem;">
+            <h3 class="card-title">Antigravity Data Warehouse Terminal Output</h3>
+            <span class="status-badge badge-success" id="sqlStatusTag">READY</span>
+          </div>
+
+          <div class="console-stats-bar">
+            <div class="stat-tag">
+              <span>Runtime:</span> <strong id="sqlRuntimeTag" style="color:var(--primary-blue);">0 ms</strong>
+            </div>
+            <div class="stat-tag">
+              <span>Rows / Records:</span> <strong id="sqlRowsTag" style="color:var(--accent-emerald);">0 rows</strong>
+            </div>
+            <div class="stat-tag">
+              <span>Engine:</span> <strong>In-Memory AlaSQL Engine</strong>
+            </div>
+          </div>
+
+          <div id="sqlOutputTerminal" class="real-sql-terminal">Antigravity Data Warehouse Terminal Ready.
+Enter a SQL query above and click "Run Query" (or press Ctrl + Enter).</div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

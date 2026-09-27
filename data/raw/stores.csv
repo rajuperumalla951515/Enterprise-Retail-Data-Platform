@@ -1,0 +1,26 @@
+store_id,store_name,store_type,region,city,state,postal_code,square_feet,open_date
+STR-IND-0001,Ranchi Retail Center #1,High-Street Retail,East & Central India,Ranchi,JH,434473,128366,2019-11-28
+STR-IND-0002,Patna Retail Center #2,Omnichannel Fulfillment Hub,East & Central India,Patna,BR,205649,96151,2023-07-25
+STR-IND-0003,Agartala Retail Center #3,High-Street Retail,North East India,Agartala,TR,199416,120288,2019-06-07
+STR-IND-0004,Ranchi Retail Center #4,Omnichannel Fulfillment Hub,East & Central India,Ranchi,JH,272990,61951,2023-12-19
+STR-IND-0005,Bhubaneswar Retail Center #5,Express City Outlet,East & Central India,Bhubaneswar,OD,410059,37305,2018-01-05
+STR-IND-0006,Bengaluru Retail Center #6,Express City Outlet,South India,Bengaluru,KA,560159,100886,2018-12-14
+STR-IND-0007,Chennai Retail Center #7,Flagship Mega Mart,South India,Chennai,TN,547568,141529,2016-10-11
+STR-IND-0008,Ahmedabad Retail Center #8,Flagship Mega Mart,West India,Ahmedabad,GJ,373131,92478,2017-09-23
+STR-IND-0009,Ranchi Retail Center #9,Omnichannel Fulfillment Hub,East & Central India,Ranchi,JH,335130,23833,2016-03-27
+STR-IND-0010,Visakhapatnam Retail Center #10,Omnichannel Fulfillment Hub,South India,Visakhapatnam,AP,404210,65362,2019-02-12
+STR-IND-0011,Pune Retail Center #11,Express City Outlet,West India,Pune,MH,219849,104693,2016-03-08
+STR-IND-0012,Hyderabad Retail Center #12,Omnichannel Fulfillment Hub,South India,Hyderabad,TS,297146,53123,2018-05-31
+STR-IND-0013,Jaipur Retail Center #13,High-Street Retail,North India,Jaipur,RJ,467585,172914,2023-01-17
+STR-IND-0014,Gurugram Retail Center #14,Flagship Mega Mart,North India,Gurugram,HR,555783,62107,2019-12-16
+STR-IND-0015,Guwahati Retail Center #15,Omnichannel Fulfillment Hub,North East India,Guwahati,AS,155371,57089,2018-02-14
+STR-IND-0016,Ahmedabad Retail Center #16,Flagship Mega Mart,West India,Ahmedabad,GJ,573323,62696,2017-02-05
+STR-IND-0017,Surat Retail Center #17,Flagship Mega Mart,West India,Surat,GJ,419402,28355,2022-11-05
+STR-IND-0018,Noida Retail Center #18,Omnichannel Fulfillment Hub,North India,Noida,UP,646579,75866,2020-10-12
+STR-IND-0019,Guwahati Retail Center #19,High-Street Retail,North East India,Guwahati,AS,675984,178814,2023-12-16
+STR-IND-0020,Bhubaneswar Retail Center #20,Omnichannel Fulfillment Hub,East & Central India,Bhubaneswar,OD,273889,125333,2021-01-11
+STR-IND-0021,Ranchi Retail Center #21,High-Street Retail,East & Central India,Ranchi,JH,197424,125514,2019-06-18
+STR-IND-0022,Mumbai Retail Center #22,High-Street Retail,West India,Mumbai,MH,346818,87425,2018-08-01
+STR-IND-0023,Pune Retail Center #23,Flagship Mega Mart,West India,Pune,MH,343305,172743,2022-02-07
+STR-IND-0024,Patna Retail Center #24,Flagship Mega Mart,East & Central India,Patna,BR,214872,109291,2021-01-05
+STR-IND-0025,Bhubaneswar Retail Center #25,Flagship Mega Mart,East & Central India,Bhubaneswar,OD,216686,86328,2019-03-20
