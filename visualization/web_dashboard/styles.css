@@ -782,14 +782,15 @@ tr:hover {
   border-color: var(--accent-rose);
 }
 
-/* IDE Editor Main Container */
+/* IDE Editor Main Container - FIXED HEIGHT */
 .sql-editor-container {
   display: flex;
   background: #ffffff;
   position: relative;
   width: 100%;
-  min-height: 200px;
+  height: 240px;
   overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
 }
 
 /* 1:1 FIXED PIXEL LINE-HEIGHT CONNECTED GUTTER */
@@ -806,6 +807,7 @@ tr:hover {
   min-width: 52px;
   box-sizing: border-box;
   overflow: hidden;
+  height: 100%;
 }
 
 .gutter-row {
@@ -815,16 +817,14 @@ tr:hover {
   padding-left: 0.5rem;
   position: relative;
   box-sizing: border-box;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 0.35rem;
+  text-align: right;
+  white-space: nowrap;
 }
 
 .gutter-row.active {
   color: var(--primary-navy);
   font-weight: 700;
-  background: #f1f5f9;
+  background: #e2e8f0;
 }
 
 .gutter-row.error-gutter {
@@ -838,6 +838,7 @@ tr:hover {
   font-size: 0.7rem;
   font-weight: 900;
   display: inline-block;
+  margin-right: 0.2rem;
 }
 
 /* Editor Area Wrapper (Dual Layer Overlay) */
@@ -845,7 +846,7 @@ tr:hover {
   position: relative;
   flex-grow: 1;
   width: 100%;
-  min-height: 200px;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -862,8 +863,7 @@ tr:hover {
   font-family: var(--font-code);
   font-size: 13px;
   line-height: 22px;
-  white-space: pre-wrap;
-  word-break: break-word;
+  white-space: pre;
   pointer-events: none;
   color: transparent;
   overflow: hidden;
@@ -904,7 +904,7 @@ tr:hover {
   position: relative;
   z-index: 2;
   width: 100%;
-  min-height: 200px;
+  height: 100%;
   background: transparent;
   color: #0f172a;
   font-family: var(--font-code);
@@ -914,11 +914,12 @@ tr:hover {
   margin: 0;
   border: none;
   outline: none;
-  resize: vertical;
+  resize: none;
   box-sizing: border-box;
   caret-color: var(--primary-blue);
-  white-space: pre-wrap;
-  word-break: break-word;
+  white-space: pre;
+  overflow-x: auto;
+  overflow-y: auto;
 }
 
 /* IDE Error Banner */

@@ -618,23 +618,24 @@ function initSQLEditorLineNumbers() {
   const updateEditorState = () => {
     const text = sqlInput.value;
     const lines = text.split('\n');
-    const totalLines = Math.max(lines.length, 6);
+    const totalLines = Math.max(lines.length, 10);
 
-    // Get current line cursor position
-    const cursorPos = sqlInput.selectionStart || 0;
-    const currentLineIndex = text.substring(0, cursorPos).split('\n').length - 1;
+    // Get exact current cursor line index (0-based)
+    const cursorPos = typeof sqlInput.selectionStart === 'number' ? sqlInput.selectionStart : text.length;
+    const textUpToCursor = text.substring(0, cursorPos);
+    const currentLineIndex = textUpToCursor.split('\n').length - 1;
 
     // Build Gutter HTML
     let gutterHTML = '';
     for (let i = 0; i < totalLines; i++) {
       const lineNum = i + 1;
-      const isActive = i === currentLineIndex;
-      const isError = activeErrorState && activeErrorState.lineIndex === i;
+      const isActive = (i === currentLineIndex);
+      const isError = (activeErrorState && activeErrorState.lineIndex === i);
 
       gutterHTML += `
         <div class="gutter-row ${isActive ? 'active' : ''} ${isError ? 'error-gutter' : ''}">
           ${isError ? '<span class="gutter-error-icon">✕</span>' : ''}
-          <span>${lineNum}</span>
+          ${lineNum}
         </div>
       `;
     }
@@ -669,22 +670,18 @@ function initSQLEditorLineNumbers() {
     highlights.scrollLeft = sqlInput.scrollLeft;
   };
 
-  // Bind input & key events to synchronously re-evaluate lines on Enter / typing
-  sqlInput.addEventListener('input', () => {
-    clearErrorDiagnostics();
-    updateEditorState();
-  });
-  sqlInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-      setTimeout(updateEditorState, 0);
-    }
-  });
-  sqlInput.addEventListener('keyup', updateEditorState);
-  sqlInput.addEventListener('click', updateEditorState);
-  sqlInput.addEventListener('scroll', () => {
-    lineNumbers.scrollTop = sqlInput.scrollTop;
-    highlights.scrollTop = sqlInput.scrollTop;
-    highlights.scrollLeft = sqlInput.scrollLeft;
+  // Bind input, cursor movement, selection, & scroll events
+  ['input', 'click', 'keyup', 'keydown', 'select', 'focus', 'scroll'].forEach(evt => {
+    sqlInput.addEventListener(evt, () => {
+      if (evt === 'input') clearErrorDiagnostics();
+      updateEditorState();
+      // Ensure sync on keypress / scroll frame
+      requestAnimationFrame(() => {
+        lineNumbers.scrollTop = sqlInput.scrollTop;
+        highlights.scrollTop = sqlInput.scrollTop;
+        highlights.scrollLeft = sqlInput.scrollLeft;
+      });
+    });
   });
 
   const currentTab = ideTabs.find(t => t.id === activeTabId);
